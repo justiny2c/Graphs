@@ -23,12 +23,14 @@ world.printRooms()
 player = Player("Name", world.startingRoom)
 
 
-reverseDir = {'n': 's', 's': 'n', 'e': 'w', 'w': 'e'} # Easily get reverse direction of direction just traveled
+
 traversalPath = []  # Path traveled to visit all the rooms
-reversePath = []  # Keep track of path segments for traveling back
+
 rooms = {}  # Rooms Graph I am building
 roomsDict = {}  # Dictionary to iterate through exits
 
+reversePath = []  # Keep track of path segments for traveling back
+reverseDir = {'n': 's', 's': 'n', 'e': 'w', 'w': 'e'} # Easily get reverse direction of direction just traveled
 
 # Add room zero to graph & dictionary
 rooms[0] = player.currentRoom.getExits()
